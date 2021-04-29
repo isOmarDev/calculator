@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,500;0,700;0,900;1,300&display=swap');
+@import url("https://allfont.net/allfont.css?fonts=digital-7");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.4;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: currentColor
+}
+
+button {
+  border: none;
+  cursor: pointer;  
+  text-decoration: none;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+#root {
+  background-color: #A5A19A;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 350px;
+  min-height: 600px;
+  background-color: white;
+  box-shadow: 16px 18px 51px -9px rgba(0,0,0,0.58);
+}
+
+.display {
+  min-height: 140px;
+}
+.display > p {
+  text-align: end;
+}
+.display-operation,
+.display-total {
+  padding-right: 30px;
+  
+}
+.display-operation {
+  margin-bottom: -7px;
+  padding-top: 28px;
+  color:  #A5A19A;
+  font-weight: 300;
+  letter-spacing: 3px;
+  min-height: 50px;
+  word-wrap: break-word;
+}
+.display-total {
+  font-size: 60px;
+  font-weight: 200;
+  min-height: 84px;
+}
+
+.numpad {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  width: 385px;
+  height: 380px;
+  margin-left: -17px;
+  box-shadow:
+  16px 13.8px 31.2px 3px rgb(0 0 0 / 29%)
+}
+.empty-space {
+  width: 17.5px;
+  background-color: #22262F;
+  opacity: 0.9;
+}
+.num-operators {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(5, 65px) ;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background-color: rgb(34, 38, 47, 0.88);
+}
+.num-operators > button {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.num-operators > button:active {
+  box-shadow: rgba(63, 68, 81, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.num-operators > button:nth-child(1) {
+  grid-area: 4 / 1 / 5 / 1;
+}
+.num-operators > button:nth-child(2) {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.num-operators > button:nth-child(3) {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.num-operators > button:nth-child(4) {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.num-operators > button:nth-child(5) {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.num-operators > button:nth-child(6) {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.num-operators > button:nth-child(7) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.num-operators > button:nth-child(8) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.num-operators > button:nth-child(9) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.num-operators > button:nth-child(10) {
+  grid-area: 5 / 1 / 6 / 2;
+}
+.num-operators > button:nth-child(11) {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.num-operators > button:nth-child(12) {
+  grid-area: 5 / 3 / 6 / 4;
+}
+.num-operators > button:nth-child(13) {
+  grid-area: 1 / 4 / 2 / 5; 
+}
+.num-operators > button:nth-child(14) {
+  grid-area: 2 / 4 / 3 / 5;  
+}
+.num-operators > button:nth-child(15) {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.num-operators > button:nth-child(16) {
+  grid-area: 4 / 4 / 5 / 5;
+}
+.num-operators > button:nth-child(17) {
+  grid-area: 5 / 4 / 6 / 5;
+}
+
+.equal {
+  background: linear-gradient(329deg, #ef5734 28%, #ffcc2f 155%) rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  cursor: pointer;
+  transition: opacity 200ms linear;
+}
+.equal:hover {
+  opacity: 0.92;
+}
+.equal > button {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
