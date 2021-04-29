@@ -1,2 +1,2 @@
 # calculator
-alculator developed with REACT
+Calculator developed with REACT
